@@ -4,17 +4,26 @@ $( () => {
 
     console.log($);
     console.log("javascript is loaded.");
+    let element = $(".loading-container");
+    element.addClass("hidden");
+    $(".loading-container").on("click",function() {
+        const element = $(".loading-container");
+        element.removeClass("hidden");
+        console.log("LOADING CLICK");
+    });
 
     $(".menu-container").on("click",function() {
         const menu = $(".navbar");
         showElement(menu,displayType[4],true);
         console.log("MENU CLICK");
     });
+
     $(".navbar-list-item").on("click",function() {
         const menu = $(".navbar");
         showElement(menu,displayType[4],true);
         console.log("LINK CLICK");
     });
+
     function showElement(element,display,animate) {
         let animateText = "";
         if(animate) animateText = "-animated";
