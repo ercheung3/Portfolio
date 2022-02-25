@@ -13,7 +13,16 @@ $( () => {
 
     function showElement(element,display,animate) {
         let animateText = "";
-        if(animate) animateText = "-animated"; 
+        if(animate) animateText = "-animated";
+        /*
+        element.toggle( function() {
+            $(".navbar").animate( {
+                opacity: 1,
+                height: "show"
+            }, 2000);
+        });
+        */
+        //element.toggle(`active-${display}${animateText}`);
         if(element.hasClass(`active-${display}${animateText}`)) element.removeClass(`active-${display}${animateText}`);
         else element.addClass(`active-${display}${animateText}`);
     }

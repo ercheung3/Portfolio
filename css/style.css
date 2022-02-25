@@ -1,15 +1,41 @@
-* {
-    
-    /*
-    border: 1px solid black;
-    */
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 2em;
+    font-style: bolder;
+}
+h2 {
+    font-size: 0.6em;
+}
+@media screen and (min-width: 481px) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 0.8em;
+    }
+}
+@media screen and (min-width: 769px) {
+    h1 {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 1em;
+    }
 }
 
 body {
-    background-color: goldenrod;
     color: seashell;
-    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 44px;
+    margin: 0;
+    padding: 0;
+    background-color: goldenrod;
 }
+
 ul {
     padding: 0;
 }
@@ -21,34 +47,20 @@ a {
     text-decoration: none;
 }
 a:hover {
-    -webkit-text-stroke: 4px black;
+    -webkit-text-stroke: 2px black;
     color: goldenrod;
 }
-.navbar {
-    display: none;
-    opacity: 0;
 
-    align-items: center;
-    justify-content: center;
-    
-    overflow: auto;
-    height: 99vh;
-    width: 99vw;
-}
+.logo-container {
+    position: fixed;
+    display: inline-block;
 
-.navbar ul{
-    display: grid;
-    gap: 10vh;
-}
+    margin: 25px 0 0 30px;
+    padding: 0;
+    top:0;
+    left:0;
 
-.navbar-list-item {
-    font-size: 2em;
-}
-
-@media screen and (min-width: 481px) {
-    .navbar-list-item {
-        font-size: 3em;
-    }
+    z-index: 3;
 }
 
 .menu-container {
@@ -56,7 +68,68 @@ a:hover {
     top: 0;
     right: 0;
     margin: 25px 30px 0px 0px;
+    z-index: 3;
+    font-size: 45px;
+    cursor: pointer;
 }
+
+@media screen and (min-width: 769px){
+    .logo-container {
+        margin: 50px 0 0 60px;
+    }
+    .menu-container {
+        margin: 50px 60px 0px 0px;
+    }
+
+}
+
+.navbar {
+    display: none;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: goldenrod;
+    overflow: auto;
+    
+
+    animation: fadeOut 0.5s ease-out;
+
+    z-index: 2;
+}
+
+.navbar ul{
+    display: grid;
+    gap: 2vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.navbar-list-item {
+    font-size: 1em;
+}
+
+@media screen and (min-width: 481px) {
+    .navbar-list-item {
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .navbar-list-item {
+        font-size: 1.5em;
+    }
+}
+
+
 
 .active-grid {
     display: grid;
@@ -67,9 +140,17 @@ a:hover {
     display: grid;
     opacity: 1;
     
-    animation: fadeIn 1s;
+    animation: corner 1s ease-out;
 }
 
+@keyframes fadeOut{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 @keyframes fadeIn{
     0% {
@@ -77,5 +158,36 @@ a:hover {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes corner {
+    0% {
+        margin: auto auto;
+        height: 50vw;
+        width: 50vw;
+        font-size: 0em;
+        border-radius: 100%;
+        background-color: black;
+        transform: translate(200%,-100%);
+    }
+    50% {
+    }
+    60% {
+        
+    }
+    80% {
+        height: 50vw;
+        width: 50vw;
+        transform: translate(25vw,10vh);
+        border-radius: 100%;
+    }
+    90% {
+        font-size: 0em;
+    }
+    100% {
+        margin: auto auto;
+        font-size: 1em;
+        background-color: goldenrod;
     }
 }
