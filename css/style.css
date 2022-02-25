@@ -33,7 +33,7 @@ h2 {
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     h1 {
         font-size: 4em;
     }
@@ -81,7 +81,7 @@ p {
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     ul, p {
         font-size: 0.8em;
         padding: 0;
@@ -97,14 +97,19 @@ li {
     list-style-type: none;
 }
 
+section {
+    margin: 0 10vw;
+}
 p a {
     text-decoration: underline;
 }
 
 a {
-    scroll-margin-top: 4vh;
     color: #F2E8DC;
     text-decoration: none;
+}
+a:target {
+    scroll-margin-top: 24px;
 }
 
 a:hover {
@@ -116,8 +121,7 @@ a:hover {
     -moz-text-fill-color: transparent;
 }
 
-
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .loading-container {
         display: none;
         position: fixed;
@@ -155,8 +159,8 @@ a:hover {
 .logo-container {
     position: fixed;
     display: inline-block;
-
-    margin: 25px 0 0 30px;
+    height: 28px;
+    margin: 5px 0 0 5px;
     padding: 0;
     top: 0;
     left: 0;
@@ -168,21 +172,41 @@ a:hover {
     position: fixed;
     top: 0;
     right: 0;
-    margin: 25px 30px 0px 0px;
+    margin: 5px 5px 0px 0px;
     z-index: 3;
-    font-size: 45px;
+    font-size: 24px;
     cursor: pointer;
 }
 
-@media screen and (min-width: 769px) {
+ .logo-container img {
+    position:absolute;
+    height: 28px;
+}
+.menu-container:hover {
+    animation: gradientText 1s ease-in-out infinite alternate-reverse;
+}
+@media screen and (min-width: 481px) {
+    .logo-container{
+        margin: 5px 0 0 10px;
+        height: 52px;
+    }
+    .logo-container img {
+        height: 52px;
+    }
+    .menu-container {
+        margin: 5px 10px 0px 0px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 821px) {
     .logo-container {
         margin: 50px 0 0 60px;
     }
-
     .menu-container {
         margin: 50px 60px 0px 0px;
+        font-size: 45px;
     }
-
 }
 
 .navbar {
@@ -226,7 +250,7 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .navbar-list-item {
         font-size: 1.5em;
     }
@@ -236,11 +260,11 @@ a:hover {
     padding: 3vh 0;
 }
 .about-me-text {
-    width: 100vw;
+    width: 80vw;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
 .about-me-text {
-    width: 45vw;
+    width: 40vw;
 }
 }
 .active-block {
