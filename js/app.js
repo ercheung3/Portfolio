@@ -7,10 +7,14 @@ $( () => {
 
     $(".menu-container").on("click",function() {
         const menu = $(".navbar");
-        showElement(menu,displayType[3],true);
+        showElement(menu,displayType[4],true);
         console.log("MENU CLICK");
     });
-
+    $(".navbar-list-item").on("click",function() {
+        const menu = $(".navbar");
+        showElement(menu,displayType[4],true);
+        console.log("LINK CLICK");
+    });
     function showElement(element,display,animate) {
         let animateText = "";
         if(animate) animateText = "-animated";
