@@ -1,3 +1,11 @@
+h2 {
+    color: #262626;
+}
+
+.header-container h2 {
+    color: #F2E8DC;
+}
+
 .header-container {
     display: flex;
     flex-direction: column;
@@ -9,13 +17,133 @@
     background-position: center center;
     background-size: cover;
 }
+
 @media screen and (min-width: 481px) {
     .header-container {
         height: 50vh;
     }
 }
+
 @media screen and (min-width: 821px) {
     .header-container {
         height: 100vh;
+    }
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 0;
+    align-items: center;
+}
+
+.about-me-text {
+    width: 100%;
+}
+/* ======= CAROUSEL SECTION ======== */
+.carousel-container {
+    width: 85%;
+}
+
+.carousel-images {
+    background: #262626;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.carousel-images img {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    display:none;
+}
+@media screen and (min-width: 821px) {
+    .carousel-container {
+        width: 50%;
+        display: flex;
+    }
+
+    .carousel-button {
+        display: inline-block;
+        position: relative;
+    }
+    .previous {
+        align-self: center;
+        left: 10%;
+        z-index: 2;
+    }
+    
+    .next {
+        align-self: center;
+        right: 10%;
+        z-index: 2;
+    }
+    
+    .carousel-button:hover {
+        cursor: pointer;
+    }
+}
+
+.carousel-images img:first-of-type {
+    display: block;
+}
+
+@media screen and (min-width: 821px) {
+    .about-me {
+        flex-direction:row;
+    }
+
+    .about-me-text {
+        width: 50%;
+    }
+
+    .container {
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width: 821px) {
+    .loading-container {
+        display: none;
+        position: fixed;
+        opacity: 0;
+        background: #262626;
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 100;
+    }
+
+    .hidden {
+        display: none;
+        opacity: 1;
+    }
+
+    @keyframes loading {
+        0% {
+            border-radius: 100%;
+            width: 100vw;
+            height: 100vw;
+            left: 0vw;
+            top: 0vh;
+        }
+
+        100% {
+            border-radius: 100%;
+            transform: scale(0%);
+            left: 50vw;
+            top: 50vh;
+        }
     }
 }

@@ -21,6 +21,8 @@ h1 {
 
 h2 {
     font-size: 0.6em;
+    text-align: right;
+    padding-right: 50px;
 }
 
 @media screen and (min-width: 481px) {
@@ -50,6 +52,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #D98943;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 body::after {
@@ -61,7 +66,7 @@ body::after {
     content: url("../img/watch.jpg");
 }
 ul, p {
-    font-size: 0.4em;
+    font-size: 0.3em;
     padding: 0;
     margin: 0;
 }
@@ -83,7 +88,7 @@ p {
 
 @media screen and (min-width: 821px) {
     ul, p {
-        font-size: 0.8em;
+        font-size: 0.5em;
         padding: 0;
         margin: 0;
     }
@@ -119,41 +124,6 @@ a:hover {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-}
-
-@media screen and (min-width: 821px) {
-    .loading-container {
-        display: none;
-        position: fixed;
-        opacity: 0;
-        background: #262626;
-        width: 100vw;
-        height: 100vh;
-
-        z-index: 100;
-    }
-
-    .hidden {
-        display: none;
-        opacity: 1;
-    }
-
-    @keyframes loading {
-        0% {
-            border-radius: 100%;
-            width: 100vw;
-            height: 100vw;
-            left: 0vw;
-            top: 0vh;
-        }
-
-        100% {
-            border-radius: 100%;
-            transform: scale(0%);
-            left: 50vw;
-            top: 50vh;
-        }
-    }
 }
 
 .logo-container {
@@ -225,7 +195,6 @@ a:hover {
     background: linear-gradient(#D98943 69%, #c27b3c);
     overflow: auto;
 
-
     animation: fadeOut 0.5s ease-out;
 
     z-index: 2;
@@ -254,18 +223,6 @@ a:hover {
     .navbar-list-item {
         font-size: 1.5em;
     }
-}
-
-.about-me {
-    padding: 3vh 0;
-}
-.about-me-text {
-    width: 80vw;
-}
-@media screen and (min-width: 821px) {
-.about-me-text {
-    width: 40vw;
-}
 }
 .active-block {
     display: block;
@@ -319,11 +276,6 @@ a:hover {
         background: #8C6637;
         transform: translate(200%, -100%);
     }
-
-    50% {}
-
-    60% {}
-
     80% {
         height: 50vw;
         width: 50vw;
@@ -359,3 +311,4 @@ a:hover {
         -moz-text-fill-color: transparent;
     }
 }
+
