@@ -4,6 +4,7 @@ h2 {
 
 .header-container h2 {
     color: #F2E8DC;
+    margin: 0px;
 }
 
 .header-container {
@@ -35,10 +36,18 @@ h2 {
     flex-direction: column;
     padding: 3vh 0;
     align-items: center;
+    gap: 2vh;
+}
+@media screen and (min-width: 821px) {
+    .about-me {
+        gap: 0vh;
+    }
 }
 
 .about-me-text {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 /* ======= CAROUSEL SECTION ======== */
 .carousel-container {
