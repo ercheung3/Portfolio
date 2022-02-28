@@ -107,20 +107,6 @@ li {
     list-style-type: none;
 }
 
-section {
-    margin: 0 10vw;
-}
-@media screen and (min-width: 481px) {
-    section {
-        margin: 5vh 10vw;
-    }
-}
-
-@media screen and (min-width: 821px) {
-    section {
-        margin: 15vh 10vw;
-    }
-}
 p a {
     text-decoration: underline;
 }
@@ -327,4 +313,3 @@ a:hover {
         -moz-text-fill-color: transparent;
     }
 }
-

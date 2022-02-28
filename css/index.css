@@ -32,18 +32,75 @@ h2 {
 }
 
 .about-me {
+    
+    background: #734F30
+}
+
+.about-me-container {
     display: flex;
     flex-direction: column;
-    padding: 3vh 0;
     align-items: center;
-    gap: 2vh;
+    gap: 1vh;
+    padding: 3vh 15vw;
+}
+
+@media screen and (min-width:481px) {
+    .about-me-container {
+        padding: 5vh 10vw;
+    }
 }
 @media screen and (min-width: 821px) {
-    .about-me {
+    .about-me-container {
+        flex-direction: row;
+        align-items: center;
         gap: 0vh;
+        padding: 10vh 15vw;
     }
 }
 
+.skills {
+    background: #D98943;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 3vh 15vw;
+}
+
+@media screen and (min-width:481px) {
+    .skills-container {
+        padding: 5vh 10vw;
+    }
+}
+@media screen and (min-width: 821px) {
+    .skills-container {
+        padding: 10vh 15vw;
+    }
+}
+
+.projects {
+    background: #D98943;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 3vh 15vw;
+}
+
+@media screen and (min-width:481px) {
+    .projects-container {
+        padding: 5vh 10vw;
+    }
+}
+@media screen and (min-width: 821px) {
+    .projects-container {
+        padding: 10vh 15vw;
+    }
+}
 .about-me-text {
     width: 100%;
     display: flex;
@@ -116,8 +173,6 @@ h2 {
         width: 50%;
     }
 }
-
-
 
 
 
