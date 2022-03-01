@@ -25,7 +25,7 @@ h2 {
     }
 }
 
-@media screen and (min-width: 821px) {
+@media screen and (min-width: 769px) {
     .header-container {
         height: 100vh;
     }
@@ -49,13 +49,62 @@ h2 {
         padding: 5vh 10vw;
     }
 }
-@media screen and (min-width: 821px) {
+@media screen and (min-width: 769px) {
     .about-me-container {
         flex-direction: row;
         align-items: center;
         gap: 0vh;
         padding: 10vh 15vw;
     }
+}
+.cards-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+
+.scene {
+    width: 100%;
+    height: 20vh;
+    perspective: 600px;
+}
+
+@media screen and (min-width: 769px) {
+    .cards-container {
+        flex-direction: row;
+    }
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    display:block;
+  }
+
+.card-face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility:hidden;
+}
+
+.card-face-front {
+    background:red;
+}
+
+.card-face-back {
+    background: blue;
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+    display:block;
 }
 
 .skills {
@@ -74,7 +123,7 @@ h2 {
         padding: 5vh 10vw;
     }
 }
-@media screen and (min-width: 821px) {
+@media screen and (min-width: 769px) {
     .skills-container {
         padding: 10vh 15vw;
     }
@@ -96,11 +145,12 @@ h2 {
         padding: 5vh 10vw;
     }
 }
-@media screen and (min-width: 821px) {
+@media screen and (min-width: 769px) {
     .projects-container {
         padding: 10vh 15vw;
     }
 }
+
 .about-me-text {
     width: 100%;
     display: flex;
@@ -109,6 +159,8 @@ h2 {
 /* ======= CAROUSEL SECTION ======== */
 .carousel-container {
     width: 85%;
+    display:flex;
+    justify-content: center;
 }
 
 .carousel-images {
@@ -116,7 +168,6 @@ h2 {
     padding: 10px;
     border-radius: 10px;
     box-sizing: border-box;
-
     position: relative;
 }
 
@@ -124,12 +175,15 @@ h2 {
     display: none;
     width: 100%;
     border-radius: 10px;
+    max-width: 556px;
+    max-height: 406px;
+    
 }
 
 .carousel-button {
     display:none;
 }
-@media screen and (min-width: 821px) {
+@media screen and (min-width: 769px) {
     .carousel-container {
         width: 50%;
         display: flex;
@@ -160,7 +214,7 @@ h2 {
     display: block;
 }
 
-@media screen and (min-width: 821px) {
+@media screen and (min-width: 769px) {
     .about-me {
         flex-direction:row;
     }
@@ -177,7 +231,7 @@ h2 {
 
 
 
-@media screen and (min-width: 821px) {
+@media screen and (min-width: 769px) {
     .loading-container {
         display: none;
         position: fixed;

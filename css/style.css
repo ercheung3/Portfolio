@@ -124,10 +124,21 @@ a:hover {
     background: linear-gradient(to left, #D98943, #F2E8DC);
     -webkit-background-clip: text;
     -moz-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
-
+iframe {
+    width: 100vw;
+    height: 60vh;
+    margin-top: 50px;
+}
+@media screen and (min-width: 421px) {
+    iframe {
+        margin-top: 10vh;
+        height: 80vh;
+    }
+}
 .logo-container {
     position: fixed;
     display: inline-block;
@@ -246,6 +257,47 @@ a:hover {
     opacity: 1;
 
     animation: corner 1s ease-out;
+}
+
+.footer-container {
+    margin-bottom: 3vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info {
+    display: inline-block;
+}
+.email > p {
+    margin: 0;
+    padding: 0;
+}
+.email {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 481px) {
+    .footer-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 1.2em
+    }
+    .footer-text, .email{
+        margin-left: 1vw;
+    }
+
+    .footer-info {
+        display: flex;
+    }
+
+    .email {
+        font-size: 1em;
+    }
 }
 
 @keyframes fadeOut {

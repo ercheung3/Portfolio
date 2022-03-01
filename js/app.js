@@ -35,6 +35,13 @@ $(() => {
             showElement(menu, displayType[4], true);
             console.log("LINK CLICK");
         });
+
+        $(".card").each(function() {
+            $(this).on("click", function() {
+                if($(this).hasClass("is-flipped")) $(this).removeClass("is-flipped");
+                else $(this).addClass("is-flipped");
+            });
+        });
     }
 
 
