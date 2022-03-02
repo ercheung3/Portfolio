@@ -25,7 +25,7 @@ h2 {
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .header-container {
         height: 100vh;
     }
@@ -50,7 +50,7 @@ h2 {
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .about-me-container {
         flex-direction: row;
         align-items: center;
@@ -72,7 +72,7 @@ h2 {
     perspective: 600px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .cards-container {
         flex-direction: row;
     }
@@ -156,7 +156,7 @@ h2 {
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .skills-container {
         padding: 10vh 15vw;
     }
@@ -179,13 +179,13 @@ h2 {
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .projects-container {
         padding: 10vh 15vw;
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
 
     .projects-container .card-face-front:hover {
         background-position: center center;
@@ -239,7 +239,7 @@ h2 {
     display: none;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .carousel-container {
         width: 50%;
         display: flex;
@@ -271,7 +271,7 @@ h2 {
     display: block;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .about-me {
         flex-direction: row;
     }
@@ -288,7 +288,7 @@ h2 {
 
 
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 821px) {
     .loading-container {
         display: none;
         position: fixed;
