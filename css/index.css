@@ -32,7 +32,7 @@ h2 {
 }
 
 .about-me {
-    
+
     background: #734F30
 }
 
@@ -49,6 +49,7 @@ h2 {
         padding: 5vh 10vw;
     }
 }
+
 @media screen and (min-width: 769px) {
     .about-me-container {
         flex-direction: row;
@@ -57,8 +58,9 @@ h2 {
         padding: 10vh 15vw;
     }
 }
+
 .cards-container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2vw;
@@ -83,28 +85,58 @@ h2 {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
-    display:block;
-  }
+    display: block;
+}
 
 .card-face {
     position: absolute;
     height: 100%;
     width: 100%;
-    backface-visibility:hidden;
+    backface-visibility: hidden;
 }
 
 .card-face-front {
-    background:red;
+    background: #262626;
+    color: #F2E8DC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
 .card-face-back {
-    background: blue;
+    background: #F2E8DC;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
     transform: rotateY(180deg);
 }
 
+.skills-info {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding-left: 10px;
+}
+
+.project-links-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+}
+
+.card-face-back a {
+    color: #262626;
+    text-decoration: none;
+}
+
 .card.is-flipped {
-    transform: rotateY(180deg);
-    display:block;
+    transform: rotateY(-180deg);
+    display: block;
 }
 
 .skills {
@@ -123,6 +155,7 @@ h2 {
         padding: 5vh 10vw;
     }
 }
+
 @media screen and (min-width: 769px) {
     .skills-container {
         padding: 10vh 15vw;
@@ -130,7 +163,7 @@ h2 {
 }
 
 .projects {
-    background: #D98943;
+    background: #8C6637;
 }
 
 .projects-container {
@@ -145,21 +178,43 @@ h2 {
         padding: 5vh 10vw;
     }
 }
+
 @media screen and (min-width: 769px) {
     .projects-container {
         padding: 10vh 15vw;
     }
 }
 
+@media screen and (min-width: 769px) {
+
+    .projects-container .card-face-front:hover {
+        background-position: center center;
+        background-size: contain;
+        font-size: 0;
+    }
+
+    .zombie:hover {
+        background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+    }
+
+    .chroma:hover {
+        background-image: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url("../img/chroma.png");
+
+    }
+
+}
+
+
 .about-me-text {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 /* ======= CAROUSEL SECTION ======== */
 .carousel-container {
     width: 85%;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
@@ -177,12 +232,13 @@ h2 {
     border-radius: 10px;
     max-width: 556px;
     max-height: 406px;
-    
+
 }
 
 .carousel-button {
-    display:none;
+    display: none;
 }
+
 @media screen and (min-width: 769px) {
     .carousel-container {
         width: 50%;
@@ -193,18 +249,19 @@ h2 {
         display: inline-block;
         position: relative;
     }
+
     .previous {
         align-self: center;
         left: 10%;
         z-index: 2;
     }
-    
+
     .next {
         align-self: center;
         right: 10%;
         z-index: 2;
     }
-    
+
     .carousel-button:hover {
         cursor: pointer;
     }
@@ -216,7 +273,7 @@ h2 {
 
 @media screen and (min-width: 769px) {
     .about-me {
-        flex-direction:row;
+        flex-direction: row;
     }
 
     .about-me-text {
