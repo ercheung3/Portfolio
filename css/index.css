@@ -189,8 +189,9 @@ h2 {
 
     .projects-container .card-face-front:hover {
         background-position: center center;
-        background-size: contain;
+        background-size: cover;
         font-size: 0;
+        background-repeat: none;
     }
 
     .zombie:hover {
